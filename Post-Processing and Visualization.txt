@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+def display_anomalies(images, anomalies):
+    for i, is_anomaly in enumerate(anomalies):
+        if is_anomaly:
+            plt.imshow(images[i])
+            plt.title(f"Anomalous Frame: {i}")
+            plt.show()
+
+# Display detected anomalies
+display_anomalies(test_images, anomalies)
